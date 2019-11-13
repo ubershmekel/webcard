@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>WebCard</title>
-    <meta name="description" content="Single page, single line card, as a business card or anything really.">
+    <meta name="description" content="Simple, shareable, card page. As a business card or anything really.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/iconfinder_misc-_card_notes_1276876.png">
 
@@ -19,6 +19,11 @@
 
 <body>
     <div id="the-app">
+
+        <section id="the-card" :style="{background, color, fontSize}">
+            <h1 id="the-text">{{ text }}</h1>
+        </section>
+
         <section>
             <h1>WebCard</h1>
 
@@ -44,10 +49,6 @@
 
             <button @click="goFullScreen">FullScreen Mode</button>
             <p>Scroll down - the card fills the full screen.</p>
-        </section>
-
-        <section id="the-card" :style="{background, color, fontSize}">
-            <h1 id="the-text">{{ text }}</h1>
         </section>
 
     </div>
