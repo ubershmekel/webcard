@@ -1,0 +1,70 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Cardd - Web Business Card</title>
+    <meta name="description" content="Single page, single line business card">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/iconfinder_misc-_card_notes_1276876.png">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <meta name="theme-color" content="#fafafa">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Roboto+Mono|Ubuntu&display=swap" rel="stylesheet"> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+</head>
+
+<body>
+    <div id="the-app">
+        <section>
+            <h1>Digital Business Card</h1>
+
+            <div class="widget">
+                <input v-model="background" placeholder="#fafafa">
+                <label>The background color is {{ background }}</label>
+            </div>
+
+            <div class="widget">
+                <input v-model="color" placeholder="#fafafa">
+                <label>The font color is {{ color }}</label>
+            </div>
+
+            <div class="widget">
+                <input v-model="fontSize" placeholder="#fafafa">
+                <label>The font size is {{ fontSize }}</label>
+            </div>
+
+            <div class="widget">
+                <textarea v-model="text" placeholder="Your email here"></textarea>
+                <label>The text size is {{ text }}</label>
+            </div>
+
+            <p>Scroll down - the card takes the full screen</p>
+        </section>
+
+        <section id="the-card" :style="{background, color, fontSize}">
+            <h1 id="the-text">{{ text }}</h1>
+        </section>
+
+    </div>
+
+    <script src="js/main.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+        window.ga = function() {
+            ga.q.push(arguments)
+        };
+        ga.q = [];
+        ga.l = +new Date;
+        ga('create', 'UA-XXXXX-Y', 'auto');
+        ga('set', 'transport', 'beacon');
+        ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

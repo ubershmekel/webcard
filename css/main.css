@@ -1,0 +1,40 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* 
+font-family: 'Roboto', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Ubuntu', sans-serif;
+*/
+
+#the-text {
+    border-radius: 1em;
+    padding: 1em;
+    /* `white-space: pre` allows newlines to show as <br> */
+    white-space: pre;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) */
+}
+
+#the-card {
+    color: #2bf;
+    background: #fff;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+text-area {
+    width: 10em;
+    height: 2em;
+}
