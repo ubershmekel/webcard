@@ -34,7 +34,7 @@ font-family: 'Ubuntu', sans-serif;
     overflow: hidden;
 }
 
-text-area {
-    width: 10em;
-    height: 2em;
+textarea {
+    width: 16em;
+    height: 4em;
 }

@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Cardd - Web Business Card</title>
-    <meta name="description" content="Single page, single line business card">
+    <title>WebCard</title>
+    <meta name="description" content="Single page, single line card, as a business card or anything really.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/iconfinder_misc-_card_notes_1276876.png">
 
@@ -20,29 +20,30 @@
 <body>
     <div id="the-app">
         <section>
-            <h1>Digital Business Card</h1>
+            <h1>WebCard</h1>
 
             <div class="widget">
                 <input v-model="background" placeholder="#fafafa">
-                <label>The background color is {{ background }}</label>
+                <label>Background color</label>
             </div>
 
             <div class="widget">
                 <input v-model="color" placeholder="#fafafa">
-                <label>The font color is {{ color }}</label>
+                <label>Font color</label>
             </div>
 
             <div class="widget">
                 <input v-model="fontSize" placeholder="#fafafa">
-                <label>The font size is {{ fontSize }}</label>
+                <label>Font size</label>
             </div>
 
             <div class="widget">
                 <textarea v-model="text" placeholder="Your email here"></textarea>
-                <label>The text size is {{ text }}</label>
+                <label>Card text</label>
             </div>
 
-            <p>Scroll down - the card takes the full screen</p>
+            <button @click="goFullScreen">FullScreen Mode</button>
+            <p>Scroll down - the card fills the full screen.</p>
         </section>
 
         <section id="the-card" :style="{background, color, fontSize}">

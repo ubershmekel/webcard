@@ -13,6 +13,21 @@
         return urlParams;
     }
 
+    function requestFullScreen(elem) {
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) {
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullScreen) {
+            elem.webkitRequestFullScreen();
+        } else if (elem.msRequestFullscreen) {
+            elem.msRequestFullscreen();
+        } else {
+            console.warn("Did not find request full screen method", elem);
+        }
+    }
+
+
     var defaultData = {
         text: "This could be your business card.\nModify it, bookmark it.\nLet others snap a picture.",
         color: "#fff",
@@ -34,6 +49,11 @@
                     this[key] = params[key];
                 }
             }
+        },
+        methods: {
+            goFullScreen() {
+                requestFullScreen(document.getElementById("the-card"));
+            },
         },
         watch: {
             $data: {
