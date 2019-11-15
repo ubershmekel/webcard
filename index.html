@@ -32,7 +32,7 @@
             <h1 id="the-text">{{ text }}</h1>
         </section>
 
-        <section>
+        <section id="the-editor">
             <h1>WebCard</h1>
 
             <div class="widget">
@@ -55,7 +55,14 @@
                 <label>Card text</label>
             </div>
 
-            <button @click="goFullScreen">Fullscreen mode</button>
+            <div class="widget">
+                <button @click="goFullScreen">Fullscreen mode</button>
+            </div>
+
+            <div class="widget">
+                <a href="https://github.com/ubershmekel/webcard">source</a>
+                <a href="https://twitter.com/ubershmekel">twitter</a>
+            </div>
         </section>
 
     </div>

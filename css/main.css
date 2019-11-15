@@ -40,6 +40,19 @@ textarea {
 }
 
 button {
-    margin: 1em;
+    margin: 1em 0;
     box-shadow: 0px 0px 8px 3px #333;
+}
+
+.widget {
+    margin: 0.5em;
+}
+
+#the-editor {
+    margin: 1em;
+}
+
+.widget a {
+    display: block;
+    margin: 0.5em 0;
 }
