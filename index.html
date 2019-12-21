@@ -19,10 +19,25 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4533496-22"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
         gtag('config', 'UA-4533496-22');
     </script>
+
+    <!-- Service worker for offline support -->
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+
 </head>
 
 <body>
@@ -59,11 +74,17 @@
                 <button @click="goFullScreen">Fullscreen mode</button>
             </div>
 
+        </section>
+
+        <footer>
+            <p class="widget">
+                FYI this page works offline.
+            </p>
             <div class="widget">
                 <a href="https://github.com/ubershmekel/webcard">source</a>
                 <a href="https://twitter.com/ubershmekel">twitter</a>
             </div>
-        </section>
+        </footer>
 
     </div>
 
